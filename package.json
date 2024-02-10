@@ -12,6 +12,7 @@
     "vite": "^5.1.0"
   },
   "dependencies": {
+    "html5-qrcode": "^2.3.8",
     "url-parse": "^1.5.10"
   }
 }

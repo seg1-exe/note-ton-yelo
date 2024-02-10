@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/style.css" />
+    <script src="/node_modules/html5-qrcode/html5-qrcode.min.js"></script>
     <title>Note ton Yelo</title>
   </head>
   <body>
@@ -13,7 +14,7 @@
     <div id="app">
       
       <div id="input-area">
-        <img src="/public/qrcode.png">
+        <div id="reader"></div>
         <input id="yelo-input" placeholder="Entrer une URL">
         <input id="bike-input" placeholder="Entrer le numéro du vélo">
         <button id="input-submit">Valider</button>

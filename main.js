@@ -1,4 +1,5 @@
-import parse from 'url-parse';
+import { parse } from 'url-parse';
+import { Html5Qrcode, Html5QrcodeScanner } from 'html5-qrcode';
 
 const yeloInput = document.getElementById('yelo-input');
 const bikeInput = document.getElementById('bike-input');
@@ -83,3 +84,25 @@ ratingSubmit.addEventListener('click', () => {
       }
   }
 });
+
+
+const scanner = new Html5QrcodeScanner('reader', {
+  fps: 10,
+  qrbox: {
+    width: 250,
+    height: 250
+  }
+});
+
+scanner.render(success, error);
+
+function success(data) {
+  console.log(data);
+  yeloInput.value = data;
+
+  scanner.clear();
+}
+
+function error(err) {
+  console.log(err);
+}
