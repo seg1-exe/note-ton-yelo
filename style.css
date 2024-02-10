@@ -54,6 +54,7 @@ button{
     font-weight: 700;
     background-color: var(--yellow);
     cursor: pointer;
+    color: var(--black);
 }
 
 #my-bike{
