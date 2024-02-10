@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yelo rating</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Note ton Yelo !!</h1>
+      <input id="yelo-input" placeholder="Entrer une URL">
+      <input id="bike-input" placeholder="Entrer le numéro du vélo">
+      <button id="input-submit">Valider</button>
+
+
+      <div id="my-bike" style="display: none;">
+        
+        <h2>Mon vélo : <h3 id="bike-id"></h3></h2>
+        <h2>Ma note : <h3 id="rating-output"><h3></h2>
+        <div id="rating-inputs">
+          <div id="input-1">
+            <input type="radio" id="1" name="rating" value="1" class="input1">
+            <label for="1">1</label>
+          </div>
+          <div id="input-2">
+            <input type="radio" id="2" name="rating" value="2">
+            <label for="2">2</label>
+          </div>
+          <div id="input-3">
+            <input type="radio" id="3" name="rating" value="3">
+            <label for="3">3</label>
+          </div>
+          <div id="input-4">
+            <input type="radio" id="4" name="rating" value="4">
+            <label for="4">4</label>
+          </div>
+          <div id="input-5">
+            <input type="radio" id="5" name="rating" value="5">
+            <label for="5">5</label>
+          </div>
+        </div>
+        <button id="rating-submit">Submit</button>
+
+        <h2>Commentaire</h2>
+        <input id="comment" placeholder="Rédigez votre commentaire">
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
