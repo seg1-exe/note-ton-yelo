@@ -2,4 +2,4 @@
 
 *en cours de développement*
 
--- npm install url-parse
+Version en ligne : https://note-ton-yelo.vercel.app/
