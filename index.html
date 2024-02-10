@@ -4,23 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yelo rating</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css" />
+    <title>Note ton Yelo</title>
   </head>
   <body>
+    <h1>Note ton Yelo</h1>
     <div id="app">
-      <h1>Note ton Yelo !!</h1>
-      <input id="yelo-input" placeholder="Entrer une URL">
-      <input id="bike-input" placeholder="Entrer le numéro du vélo">
-      <button id="input-submit">Valider</button>
+      
+      <div id="input-area">
+        <img src="/public/qrcode.png">
+        <input id="yelo-input" placeholder="Entrer une URL">
+        <input id="bike-input" placeholder="Entrer le numéro du vélo">
+        <button id="input-submit">Valider</button>
+      </div>
 
 
       <div id="my-bike" style="display: none;">
         
-        <h2>Mon vélo : <h3 id="bike-id"></h3></h2>
-        <h2>Ma note : <h3 id="rating-output"><h3></h2>
+        <div class="output-areas">
+          <h2>Vélo n°</h2>
+          <h3 id="bike-id"></h3>
+        </div>
+        
         <div id="rating-inputs">
           <div id="input-1">
-            <input type="radio" id="1" name="rating" value="1" class="input1">
+            <input type="radio" id="1" name="rating" value="1">
             <label for="1">1</label>
           </div>
           <div id="input-2">
@@ -40,10 +49,22 @@
             <label for="5">5</label>
           </div>
         </div>
-        <button id="rating-submit">Submit</button>
 
-        <h2>Commentaire</h2>
+        <p>Expliquez-nous votre note !</p>
         <input id="comment" placeholder="Rédigez votre commentaire">
+
+        <button id="rating-submit">Valider</button>
+      </div>
+      <div id="thanks-area" style="display: none;">
+        <h2>Merci !</h2>
+        <div>
+          <p>Vous avez donné une note de </p>
+          <p id="rating-output" class="output"></p>
+          <p> au vélo n°</p>
+          <p id="bike-id-area" class="output"></p>
+        </div>
+
+        <p>Votre retour va être envoyé à notre équipe dès que possible !</p>
       </div>
     </div>
     <script type="module" src="/main.js"></script>

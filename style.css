@@ -1,0 +1,154 @@
+*{
+    --yellow: #ffd60a;
+    --black: #000;
+    --gray: #e7e7e7;
+    --white : #fff;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#app{
+    padding: 20px;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 900;
+    padding: 30px 0;
+    background-color: var(--yellow);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#input-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-area input{
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button{
+    padding: 10px;
+    margin: 10px 0;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--yellow);
+    cursor: pointer;
+}
+
+#my-bike{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.output-areas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-bike h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 30px 0;
+}
+
+#my-bike h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#rating-inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    width: 70%;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"] + label{
+    background-color: var(--gray);
+    padding: 12px 17px;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked + label{
+    background-color: var(--yellow);
+}
+
+#my-bike p{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+#comment{
+    padding: 80px 10px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#thanks-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#thanks-area>p{
+    text-align: center;
+}
+
+#thanks-area h2{
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 30px 0;
+}
+
+#thanks-area div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+    margin: 30px;
+}
+
+#thanks-area p{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.output{
+    margin: 0 5px;
+    font-size: 1.4rem;
+    text-decoration: underline;
+}

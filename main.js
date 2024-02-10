@@ -6,12 +6,14 @@ const inputSubmit = document.getElementById('input-submit');
 const bikeOutput = document.getElementById('bike-id');
 
 const myBike = document.getElementById('my-bike');
+const inputArea = document.getElementById('input-area');
 
 const radiosButtons = document.querySelectorAll('input[name="rating"]');
 const ratingSubmit = document.getElementById('rating-submit');
 const ratingOutput = document.getElementById('rating-output');
 
-
+const thanksArea = document.getElementById('thanks-area');
+const bikeIdArea = document.getElementById('bike-id-area');
 
 inputSubmit.addEventListener('click', () => {
 
@@ -42,7 +44,8 @@ inputSubmit.addEventListener('click', () => {
       //On vérifie que l'id est bien compris entre 1000 et 9999
       if (bikeId > 1000 && bikeId < 9999){
         bikeOutput.innerHTML = bikeId;
-        myBike.style.display = "block";
+        myBike.style.display = "flex";
+        inputArea.style.display = "none";
       } else {
         alert("Merci de renseigner un numéro de vélo valide.");
       }
@@ -55,7 +58,8 @@ inputSubmit.addEventListener('click', () => {
     //On vérifie que l'id est bien compris entre 1000 et 9999
     if (bikeId > 1000 && bikeId < 9999){
       bikeOutput.innerHTML = bikeId;
-      myBike.style.display = "block";
+      myBike.style.display = "flex";
+      inputArea.style.display = "none";
     } else {
       alert("Merci de renseigner un numéro de vélo valide.");
     }
@@ -69,7 +73,10 @@ ratingSubmit.addEventListener('click', () => {
   for (const radioButton of radiosButtons) {
       if (radioButton.checked) {
           ratingSelected = radioButton.value;
+          myBike.style.display = "none";
+          thanksArea.style.display = "flex";
           ratingOutput.innerHTML = ratingSelected;
+          bikeIdArea.innerHTML = bikeOutput.innerHTML;
           break;
       } else {
           ratingOutput.innerHTML = "Merci de renseigner une note.";
